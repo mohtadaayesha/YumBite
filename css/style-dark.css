@@ -1,0 +1,357 @@
+/* style-dark.css */
+
+/* --- Base Styles --- */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #000000;
+  color: #ffa500;
+  padding: 8px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ffa500;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo img {
+  height: 40px;
+  vertical-align: middle;
+}
+
+.logo1 {
+  margin-top: 8px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 5px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffa500;
+}
+
+.nav-links li.cart {
+  margin-top: -3px;
+}
+
+.login-btn {
+  background-color: #fc9905;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid #ff9900;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #0f0101;
+  color: #000000;
+  border: 2px solid #ff9900;
+}
+
+/* Dropdown styles */
+.dropdown-checkbox {
+  display: none;
+}
+
+.dropdown-label {
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: -3px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  border: 1px solid #ffa500;
+  border-radius: 4px;
+  margin-top: 5px;
+  z-index: 1000;
+  min-width: 150px;
+}
+
+.dropdown .dropdown-checkbox:checked + .dropdown-label + .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 10px;
+  color: white;
+  background-color: #000000;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #ffa500;
+  color: black;
+}
+
+/* Hero section */
+.hero {
+  background: url("../images/bg.jpg") no-repeat center center/cover;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+  color: #ffa500;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin: 0;
+  color: #ff9900;
+  text-align: left;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin: 15px 0;
+  color: #ffffff;
+  text-align: left;
+}
+
+.hero .btn {
+  background-color: #ff9900;
+  color: #000000;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  width: fit-content;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: #000000;
+  text-align: center;
+  padding: 10px;
+  color: #ffa500;
+  font-weight: bold;
+  border-top: 3px solid #ffa500;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #ffa500;
+  border-radius: 2px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.popup-content {
+  background-color: transparent; /* No solid box behind text */
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 700px;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+.popup-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.popup-content span {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+/* --- Slider Section --- */
+.slider-section {
+  padding: 30px 40px;
+  background-color: #000;
+}
+
+.slider-section h2 {
+  color: #ffa500;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Swiper container cursor and touch */
+.swiper {
+  touch-action: pan-y;
+  cursor: grab;
+  user-select: none;
+  margin-bottom: 40px;
+}
+
+.swiper:active {
+  cursor: grabbing;
+}
+
+/* Swiper slides style */
+.swiper-slide {
+  background: #1b1b1b;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Slide images */
+.swiper-slide img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Slide text */
+.swiper-slide p {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0;
+  color: #ffa500;
+}
+
+/* Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffa500;
+}
+
+/* Swiper pagination bullets */
+.swiper-pagination-bullet {
+  background: #ffa500;
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #000000;
+    flex-direction: column;
+    width: 220px;
+    padding: 20px;
+    border: 2px solid #ffa500;
+    border-radius: 5px;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-bottom: 15px;
+  }
+
+  .dropdown-menu {
+    position: static;
+    border: none;
+    background: transparent;
+  }
+
+  .dropdown-menu li a {
+    color: #faf9f7;
+    padding-left: 25px;
+    font-weight: normal;
+  }
+}

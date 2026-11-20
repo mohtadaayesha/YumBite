@@ -1,0 +1,20 @@
+# Private configuration
+.env
+.env.*
+!.env.example
+
+# Temporary files
+*.log
+*.tmp
+
+# Editor settings
+.vscode/
+.idea/
+
+# Dependencies
+vendor/
+node_modules/
+
+# Windows
+Thumbs.db
+Desktop.ini
